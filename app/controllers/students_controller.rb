@@ -18,6 +18,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    puts "I'm inside the activate controller!"
     @student = Student.find(params[:id])
     if @student.active == false
       @student.active = true
