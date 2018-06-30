@@ -58,6 +58,8 @@ describe 'Activate page' do
 
   it "Should mark an inactive student as active" do
     visit activate_student_path(@student)
+    puts "======= "
+    puts activate_student_path
     @student.reload
     expect(@student.active).to eq(true)
   end
