@@ -26,7 +26,7 @@ class StudentsController < ApplicationController
       @student.active = false
     end
     @student.save
-    redirect_to "show/#{@student.id}"
+    redirect_to "students/#{@student.id}"
   end
 
   private
