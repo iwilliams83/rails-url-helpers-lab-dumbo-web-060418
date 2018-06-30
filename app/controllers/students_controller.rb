@@ -12,6 +12,12 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    @student = Student.find(params[:id])
+    if @student.active == false
+      @student.active = true
+    end
+    @student.save
+    redirect_to "show/#{@student.id}"
   end
 
   private
