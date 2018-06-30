@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
       @status = ' inactive.'
     else
       @status = ' active.'
+    end
     render :show
   end
 
