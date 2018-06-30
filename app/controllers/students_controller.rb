@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
     if @student.active == false
       @student.active = true
     else
-      @student.active == false
+      @student.active = false
     end
     @student.save
     redirect_to "show/#{@student.id}"
