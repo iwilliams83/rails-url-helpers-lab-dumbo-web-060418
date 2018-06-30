@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :students, only: [:index, :show]
+  resources :students, path_names: { update: 'activate' }
 
   # This show route can be refactored into the above resources method call, like so:
   # resources :students, only: [:index, :show]
   # However, for the sake of this lab and seeing how you can pass params through
   # the route, we'll keep it explicit for now and refactor later.
-  get "/students/:id/activate", to: "students#show", as: 'activate'
+  #get "/students/:id/activate", to: "students#show", as: 'activate'
 end
