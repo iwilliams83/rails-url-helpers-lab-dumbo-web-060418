@@ -21,6 +21,8 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     if @student.active == false
       @student.active = true
+    else
+      @student.active == false
     end
     @student.save
     redirect_to "show/#{@student.id}"
